@@ -1,3 +1,4 @@
+/* General reset and container styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +8,106 @@
 body {
   background-color: #ccc;
 }
+
 .container {
+  background-color: #e5e5fd;
   max-width: 900px;
   margin: 0 auto;
+  padding: 20px;
+  border: 10px solid #1d1e4c;
 }
 
+.content {
+  padding: 20px;
+}
+
+/* Top section styles */
+.top_section {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top_section h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #1d1e4c;
+  text-transform: uppercase;
+}
+
+.top_section h4 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.image_container {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+}
+
+.image_container img {
+  width: 100%;
+  height: auto;
+}
+
+/* About section styles */
+.about_section {
+  margin-top: 30px;
+}
+
+.about_section h2 {
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about_section p {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 1.2px;
+  text-align: justify;
+}
+
+/* Biography section styles */
+.biography_section {
+  margin: 30px 0;
+  text-align: right;
+}
+
+.biography_section h3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-align: right;
+}
+
+.biography_section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: right;
+}
+
+.biography_section li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-align: right;
+}
+
+/* Footer styles */
+footer {
+  margin: 30px 0;
+}
+
+footer p {
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Apply box styles */
 .apply_box {
   max-width: 600px;
   padding: 20px;
@@ -32,6 +128,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
+
 .form_control {
   display: flex;
   flex-direction: column;
@@ -57,10 +154,10 @@ input:focus {
 
 .button_container {
   display: flex;
-
   justify-content: flex-end;
   margin-top: 20px;
 }
+
 button {
   background-color: red;
   border: transparent solid 2px;
@@ -69,6 +166,7 @@ button {
   border-radius: 8px;
   transition: 0.3s ease-in;
 }
+
 button:hover {
   background-color: #ccc;
   border: 2px solid red;
@@ -76,15 +174,94 @@ button:hover {
   transition: 0.3s ease-out;
   cursor: pointer;
 }
+
 .textarea_control {
   grid-column: 1 / span 2;
 }
+
 .textarea_control textarea {
   width: 100%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .top_section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top_section h1 {
+    font-size: 30px;
+  }
+
+  .top_section h4 {
+    font-size: 18px;
+  }
+
+  .image_container {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .about_section h2 {
+    font-size: 40px;
+  }
+
+  .about_section p {
+    font-size: 16px;
+  }
+
+  .biography_section h3 {
+    font-size: 24px;
+  }
+
+  .biography_section li {
+    font-size: 16px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top_section h1 {
+    font-size: 24px;
+  }
+
+  .top_section h4 {
+    font-size: 16px;
+  }
+
+  .image_container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about_section h2 {
+    font-size: 30px;
+  }
+
+  .about_section p {
+    font-size: 14px;
+  }
+
+  .biography_section h3 {
+    font-size: 20px;
+  }
+
+  .biography_section li {
+    font-size: 14px;
+  }
+
+  footer p {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 460px) {
   .textarea_control {
     grid-column: 1 / span 1;
   }
-} ;
+}
